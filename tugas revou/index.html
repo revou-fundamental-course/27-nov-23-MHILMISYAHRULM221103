@@ -1,0 +1,117 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keliling Segitiga</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Keliling Segitiga :</h1>
+        <img src="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2021/01/15/1853786887.jpg" alt="Italian Trulli">
+        <p>Rumus keliling segitiga</p>
+        <h5>K = S1 + S2 + S3 </h5>
+        <p>Di mana : </p>
+        <p> K = Keliling</p>
+        <p>S1 = Sisi A</p>
+        <p>S2 = Sisi B</p>
+        <P>S3 = Sisi C</P>
+        <h2>Hitung Keliling Segitiga</h2>
+        <form id="segitigaForm">
+            <input type="number" id="sisi1" name="sisi1" required>
+            <br>
+            <input type="number" id="sisi2" name="sisi2" required>
+            <br>
+            <input type="number" id="sisi3" name="sisi3" required>
+            <button type="submit">Hitung</button><br>
+            <button type="reset">reset</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <div class="container">
+        <h2>Welcome to katik</h2>
+        <p class="p container">Hai sobat, Selamat datang di katik:|</p>
+        <p>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
+        <h1>luas Segitiga</h1>
+        <img src="data:image/jpeg;base64,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" alt="Italian Trulli">
+        <p>Rumus Luas segitiga yaitu :</p>
+        <h5>L = 1/2 X a x t </h5>
+        <p>Di mana : </p>
+        <p>L = Luas</p>
+        <p>a = Panjang Alas</p>
+        <p>t = Tinggi</p>
+        <h2>Hitung Luas Segitiga</h2>
+        <form id="segitigaForm">
+            <input type="number" id="alas" name="alas" required>
+            <br>
+            <input type="number" id="tinggi" name="tinggi" required>
+            <br>
+            <button type="submit">Hitung</button><br>
+            <button type="reset">reset</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keliling dan Luas Segitiga</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Keliling Segitiga :</h1>
+        <img src="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2021/01/15/1853786887.jpg" alt="Italian Trulli">
+        <p>Rumus keliling segitiga</p>
+        <h5>K = S1 + S2 + S3 </h5>
+        <p>Di mana:</p>
+        <p>K = Keliling</p>
+        <p>S1 = Sisi A</p>
+        <p>S2 = Sisi B</p>
+        <p>S3 = Sisi C</p>
+        <h2>Hitung Keliling Segitiga</h2>
+        <form id="kelilingForm">
+            <input type="number" id="kelilingSisi1" name="kelilingSisi1" required>
+            <br>
+            <input type="number" id="kelilingSisi2" name="kelilingSisi2" required>
+            <br>
+            <input type="number" id="kelilingSisi3" name="kelilingSisi3" required>
+            <button type="submit" onclick="hitungKeliling()">Hitung</button><br>
+            <button type="reset">Reset</button>
+        </form>
+        <div id="kelilingResult"></div>
+    </div>
+
+    <div class="container">
+        <h2>Welcome to katik</h2>
+        <p class="p container">Hai sobat, Selamat datang di katik:|</p>
+        <p>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
+        <h1>Luas Segitiga</h1>
+        <p>Rumus Luas segitiga yaitu :</p>
+        <h5>L = 1/2 X a x t </h5>
+        <p>Di mana:</p>
+        <p>L = Luas</p>
+        <p>a = Panjang Alas</p>
+        <p>t = Tinggi</p>
+        <h2>Hitung Luas Segitiga</h2>
+        <form id="luasForm">
+            <input type="number" id="luasAlas" name="luasAlas" required>
+            <br>
+            <input type="number" id="luasTinggi" name="luasTinggi" required>
+            <br>
+            <button type="submit" onclick="hitungLuas()">Hitung</button><br>
+            <button type="reset">Reset</button>
+        </form>
+        <div id="luasResult"></div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
